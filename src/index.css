@@ -1,0 +1,32 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@theme {
+  --color-primary: #F2B418;
+  --color-neutral: #ECF8FD;
+  --color-neutral-dark: #AFCBD5;
+  --color-accent: #815355;
+  --color-text: #272838;
+  --color-blue-text: #4C676F;
+}
+
+:root {
+  --primary: #F2B418;
+  --neutral: #ECF8FD;
+  --neutral-dark: #AFCBD5;
+  --accent: #815355;
+  --text: #272838;
+  --blue-text: #4C676F;
+}
+
+body {
+  background: var(--neutral);
+  color: var(--text);
+}
+
+h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+}
