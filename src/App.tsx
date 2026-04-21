@@ -1,26 +1,18 @@
 import { Route, Routes } from 'react-router'
 import './App.css'
 import Home from './pages/Home'
-import Experience from './pages/Experience'
-import Header from './components/Header'
-import CV from './pages/CV'
-import Contact from './pages/Contact'
+import Footer from './components/Footer'
 function App() {
   return (
-    <>
-    <Header />
-    <main>
-
-    <Routes>
-      <Route index element={<Home />} />
-      <Route path="Contact" element={<Contact />} />
-      <Route path="CV" element={<CV />} />
-      <Route path="experience" element={<Experience />} />
-
-    </Routes>
+    <div className="min-h-screen flex flex-col">
+    <main className="flex-grow">
+      <Routes>
+        <Route index element={<Home />} />
+      </Routes>
     </main>
+    <Footer />
 
-    </>
+    </div>
   )
 }
 
