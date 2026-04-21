@@ -10,6 +10,10 @@
   --color-accent: #815355;
   --color-text: #272838;
   --color-blue-text: #4C676F;
+  --color-muted-blue-light: #DEEAEF;
+  --color-muted-blue-dark: #48626B;
+  --color-background: #F4F2FF;
+  --font-family: "Instrument Sans", sans-serif;
 }
 
 :root {
@@ -19,14 +23,51 @@
   --accent: #815355;
   --text: #272838;
   --blue-text: #4C676F;
+  --background: #F4F2FF;
+  --header-family: "Instrument Sans", sans-serif;
+  --text-font: "Work Sans", sans-serif;
+  --muted-blue-light: #DEEAEF;
+  --muted-blue-dark: #48626B;
 }
 
 body {
-  background: var(--neutral);
+  background: var(--background);
+  color: var(--text);
+  font-family: var(--text-font);
+  min-height: 100dvh;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--header-family);
   color: var(--text);
 }
 
 h1 {
   font-size: 2.25rem;
   font-weight: 700;
+}
+
+/* Glass Effect for Navigation */
+.glass-nav {
+  background-color: rgba(244, 242, 255, 0.8);
+  backdrop-filter: blur(24px);
+}
+
+/* Hero Ribbon Accent */
+.hero-ribbon {
+  position: absolute;
+  left: 0;
+  top: 25%;
+  width: 4rem;
+  height: 0.25rem;
+  background-color: var(--neutral-dark);
+}
+
+/* Material Symbols Icon Styling */
+.material-symbols-outlined {
+  font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+  vertical-align: middle;
 }
