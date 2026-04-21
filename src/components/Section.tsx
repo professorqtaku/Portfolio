@@ -1,11 +1,13 @@
 interface WrapperProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   className?: string;
+  isFullWidth?: boolean;
 }
 
-function Section ({ children, className }: WrapperProps) {
+function Section ({ children, className, isFullWidth = false }: WrapperProps) {
+    const widthClass = isFullWidth ? "w-full" : "w-full p-10 md:p-20";
     return ( 
-        <section className={"w-full p-10 md:p-20" + " " + className}>
+        <section className={`${widthClass} ${className}`}>
             {children}
         </section>
      );
