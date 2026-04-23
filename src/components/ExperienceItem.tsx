@@ -14,11 +14,11 @@ function ExperienceItem ({ title, descriptions, period, workplace, skills, index
     const colors = ['text-primary-container', 'text-secondary-fixed-dim', 'text-tertiary-container', 'text-primary'];
     
     return ( 
-        <div className="relative pl-12">
-            <div className={`absolute left-0 top-0 ${colors[index % colors.length]} scale-150 ${iconRotations[index % iconRotations.length]}`}>
+        <div className="relative sm:pl-12">
+            <div className={`absolute left-0 top-0 hidden sm:block ${colors[index % colors.length]} scale-150 ${iconRotations[index % iconRotations.length]}`}>
                 <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>star</span>
             </div>
-            {index < 3 && <div className="absolute left-4 top-8 bottom-0 w-1 bg-secondary-container rounded-full"></div>}
+            {index < 3 && <div className="absolute left-4 top-8 bottom-0 w-1 bg-secondary-container rounded-full sm:block hidden"></div>}
             <div className="space-y-2">
                 <div className="flex justify-between items-start">
                     <div>

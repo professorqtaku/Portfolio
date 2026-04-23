@@ -1,10 +1,14 @@
-import { NavLink } from "react-router";
 import ExperienceItem from "./ExperienceItem";
 import { experiences } from "../data/experiences";
+import StyledNavLink from "./StyledNavLink";
 
 type ExperienceSectionProps = {
     className?: string
 }
+
+const handleNavClick = () => {
+    window.scroll(0, 0);
+};
 
 function ExperienceSection({ className }: ExperienceSectionProps) {
         const careerData = experiences.filter(exp => exp.showInHome);
@@ -31,7 +35,7 @@ function ExperienceSection({ className }: ExperienceSectionProps) {
                         />
                     ))}
                 </div>
-                <NavLink to="/experience">See all experiences here</NavLink>
+                <StyledNavLink to="/experience" onClick={handleNavClick} className="mt-6">See all experiences here</StyledNavLink>
             </section>
     );
 }

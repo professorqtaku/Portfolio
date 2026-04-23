@@ -1,4 +1,5 @@
 import ProjectItem from "./ProjectItem";
+import StyledNavLink from "./StyledNavLink";
 
 type ProjectsSectionProps = {
     projects: {
@@ -9,6 +10,10 @@ type ProjectsSectionProps = {
         imageUrl?: string;
     }[];
 }
+
+const handleNavClick = () => {
+    window.scroll(0, 0);
+};
 
 function ProjectsSection({ projects }: ProjectsSectionProps) {
     return (
@@ -29,6 +34,7 @@ function ProjectsSection({ projects }: ProjectsSectionProps) {
                     />
                 ))}
             </div>
+            <StyledNavLink to="/projects" className="text-lg" onClick={handleNavClick}>See all projects</StyledNavLink>
         </section>
     );
 }
