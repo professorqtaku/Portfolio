@@ -1,16 +1,20 @@
 type ChipProps = {
     text: string;
-    type?: 'primary' | 'secondary';
+    type?: 'primary' | 'secondary' | 'tertiary';
     className?: string;
+    icon?: string;
 }
 
-function Chip ({ text, type = 'primary', className }: ChipProps) {
+function Chip ({ text, type = 'primary', className, icon }: ChipProps) {
     const typeStyles = type === 'primary' 
-        ? 'bg-primary text-white' 
-        : 'bg-muted-blue-light text-muted-blue-dark';
+        ? 'bg-secondary-container text-on-secondary-container' 
+        : type === 'tertiary'
+        ? 'bg-tertiary-container text-on-tertiary-container'
+        : 'bg-surface-container-high text-on-surface-variant';
     
     return ( 
-        <div className={`font-bold inline-block px-3 py-1 rounded-full text-sm ${typeStyles} ${className || ''}`} >
+        <div className={`font-label-lg inline-flex items-center gap-1.5 px-4 py-2 rounded-full ${typeStyles} ${className || ''}`} >
+            {icon && <i className="material-symbols-outlined text-sm">{icon}</i>}
             {text}
         </div>
      );

@@ -5,7 +5,7 @@ interface WrapperProps {
 }
 
 function Section ({ children, className, isFullWidth = false }: WrapperProps) {
-    const widthClass = isFullWidth ? "w-full" : "w-full p-10 md:p-20";
+    const widthClass = isFullWidth ? "w-full" : "w-full";
     return ( 
         <section className={`${widthClass} ${className}`}>
             {children}
@@ -13,4 +13,4 @@ function Section ({ children, className, isFullWidth = false }: WrapperProps) {
      );
 }
 
-export default Section ;
+export default Section;
