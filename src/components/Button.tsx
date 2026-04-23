@@ -7,7 +7,7 @@ interface WrapperProps {
 }
 
 const Button = ({ children, onClick, buttonType = 'primary', className = "", href }: WrapperProps) => {
-    const baseStyles = 'inline-flex items-center justify-center font-bold px-8 py-3 rounded-full transition-all duration-300 active:translate-y-1';
+    const baseStyles = 'inline-flex items-center justify-center font-bold px-8 py-3 rounded-full transition-all duration-300 active:translate-y-1 cursor-pointer';
     
     const buttonStyles = {
         primary: 'bg-primary-container text-on-primary-container border-b-4 border-tertiary hover:scale-105',

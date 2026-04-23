@@ -9,7 +9,7 @@ interface HeroProps {
     skills?: string;
 }
 
-function Hero({ name, title, location = "Lund, Sweden", skills = "React & Node.js" }: HeroProps) {
+function Hero({ name, title, location = "Sweden", skills = "React & Node.js" }: HeroProps) {
     return (
         <section className="relative animate-in fade-in slide-in-from-bottom-8 duration-700">
             <div className="bg-white rounded-lg border-4 border-secondary-container window-shadow sticker-glow p-8 flex flex-col md:flex-row gap-10 items-center overflow-hidden">

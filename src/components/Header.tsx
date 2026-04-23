@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { NavLink } from "react-router";
 import Button from "./Button";
+import StyledNavLink from "./StyledNavLink";
 
 function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -25,22 +26,10 @@ function Header() {
                     <span className="material-symbols-outlined text-2xl">{isMenuOpen ? 'close' : 'menu'}</span>
                 </button>
 
-                <div className={`flex items-center gap-2 font-bold text-sm tracking-tight ${isMenuOpen ? 'absolute top-full left-0 right-0 mt-4 mx-4 flex-col bg-white/90 backdrop-blur-xl rounded-2xl border-4 border-secondary-container p-4' : 'hidden'}`}>
-                    <NavLink to="/" className={({ isActive }) => 
-                        isActive 
-                        ? "bg-primary text-on-primary px-6 py-2 rounded-full scale-105 transition-all duration-300 w-full text-center"
-                        : "text-on-surface-variant px-6 py-2 hover:bg-secondary-container/30 rounded-full hover:scale-110 hover:rotate-2 transition-all duration-300 w-full text-center"
-                    } onClick={handleNavClick}>Home</NavLink>
-                    <NavLink to="/experience" className={({ isActive }) => 
-                        isActive 
-                        ? "bg-primary text-on-primary px-6 py-2 rounded-full scale-105 transition-all duration-300 w-full text-center"
-                        : "text-on-surface-variant px-6 py-2 hover:bg-secondary-container/30 rounded-full hover:scale-110 hover:rotate-2 transition-all duration-300 w-full text-center"
-                    } onClick={handleNavClick}>Experience</NavLink>
-                    <NavLink to="/projects" className={({ isActive }) => 
-                        isActive 
-                        ? "bg-primary text-on-primary px-6 py-2 rounded-full scale-105 transition-all duration-300 w-full text-center"
-                        : "text-on-surface-variant px-6 py-2 hover:bg-secondary-container/30 rounded-full hover:scale-110 hover:rotate-2 transition-all duration-300 w-full text-center"
-                    } onClick={handleNavClick}>Projects</NavLink>
+                <div className={`md:flex items-center gap-2 font-bold text-sm tracking-tight ${isMenuOpen ? 'absolute top-full left-0 right-0 mt-4 mx-4 flex-col bg-white/90 backdrop-blur-xl rounded-2xl border-4 border-secondary-container p-4' : 'hidden'}`}>
+                    <StyledNavLink to="/" onClick={handleNavClick}>Home</StyledNavLink>
+                    <StyledNavLink to="/experience" onClick={handleNavClick}>Experience</StyledNavLink>
+                    <StyledNavLink to="/projects" onClick={handleNavClick}>Projects</StyledNavLink>
                     <Button href="#contact" buttonType="secondary" className="px-6 py-2 w-full justify-center" onClick={() => {handleNavClick();}}>Contact</Button>
                 </div>
             </div>

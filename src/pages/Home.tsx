@@ -2,13 +2,11 @@ import Hero from "../components/Hero";
 import Intro from "../components/Intro";
 import Button from "../components/Button";
 import Chip from "../components/Chip";
-import ExperienceItem from "../components/ExperienceItem";
 import ProjectsSection from "../components/ProjectsSection";
-import { experiences } from "../data/experiences";
 import { cv } from "../data/cv";
+import ExperienceSection from "../components/ExperienceSection";
 
 function Home() {
-    const careerData = experiences.filter(exp => exp.showInHome);
     const projectData = cv.projects.filter(p => p.isInHome);
     const skills = cv.skills;
     const certifications = cv.certifications;
@@ -19,7 +17,7 @@ function Home() {
                 <Hero 
                     name="Qiling Tan" 
                     title="Fullstack Developer" 
-                    location="Lund, Sweden"
+                    location="Sweden"
                     skills="React & Node.js"
                 />
 
@@ -27,27 +25,7 @@ function Home() {
 
                 <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
                     <div className="md:col-span-8" id="Career_Logs">
-                        <section className="bg-white rounded-lg border-4 border-secondary-container window-shadow sticker-glow p-8 relative overflow-hidden">
-                            <div className="absolute top-0 left-0 right-0 bg-secondary-container/50 h-10 border-b-4 border-secondary-container flex items-center px-6">
-                                <div className="flex items-center gap-3">
-                                    <i className="material-symbols-outlined text-primary-container text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>folder</i>
-                                    <span className="font-label-lg text-secondary text-xs uppercase tracking-widest">Career_Logs</span>
-                                </div>
-                            </div>
-                            <div className="mt-8 space-y-16">
-                                {careerData.map((exp, index) => (
-                                    <ExperienceItem
-                                        key={`exp-${index}`}
-                                        title={exp.title}
-                                        descriptions={exp.descriptions}
-                                        period={exp.period}
-                                        workplace={exp.company}
-                                        skills={exp.skills}
-                                        index={index}
-                                    />
-                                ))}
-                            </div>
-                        </section>
+                        <ExperienceSection />
                     </div>
                     <div className="md:col-span-4 bg-secondary-container/40 rounded-lg border-4 border-secondary-container window-shadow sticker-glow p-8 relative overflow-hidden">
                         <div className="absolute top-0 left-0 right-0 bg-secondary-container/50 h-10 border-b-4 border-secondary-200 flex items-center px-6">
@@ -59,7 +37,7 @@ function Home() {
                                 <div className="space-y-1">
                                     <div className="h-8 bg-white/50 rounded-full border-2 border-white overflow-hidden p-1">
                                         <div className="h-full bg-gradient-to-r from-secondary-fixed-dim to-primary-container rounded-full w-[90%] relative">
-                                            <div className="absolute top-0 bottom-0 left-0 right-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.2)_50%,transparent_75%)] bg-[length:20px_20px] animate-shimmer"></div>
+                                            <div className="absolute top-0 bottom-0 left-0 right-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.2)_50%,transparent_75%)] bg-[length:20px_20px] "></div>
                                         </div>
                                     </div>
                                     <div className="flex justify-between text-xs font-bold text-secondary">
