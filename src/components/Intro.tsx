@@ -15,7 +15,7 @@ function Intro() {
                 </li>
                 <li className="flex items-start gap-3">
                     <span className="material-symbols-outlined text-primary-container mt-1" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
-                    <span className="text-on-surface leading-snug">5+ years of experience delivering scalable solutions.</span>
+                    <span className="text-on-surface leading-snug">2+ years of experience delivering scalable solutions.</span>
                 </li>
             </ul>
         </div>

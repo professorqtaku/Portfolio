@@ -26,9 +26,11 @@ function ExperienceItem ({ title, descriptions, period, workplace, skills, index
                         <p className="font-label-lg text-primary">{workplace} • {period}</p>
                     </div>
                 </div>
-                <p className="text-on-surface-variant font-body-md leading-relaxed">
-                    {descriptions[0]}
-                </p>
+                <ul className="list-disc list-inside text-on-surface-variant font-body-md leading-relaxed space-y-1">
+                    {descriptions.map((desc, descIndex) => (
+                        <li key={descIndex}>{desc}</li>
+                    ))}
+                </ul>
                 <div className="flex flex-wrap gap-3">
                     {skills.map((skill, skillIndex) => 
                         <Chip key={`experience-skill-item-${skillIndex}`} text={skill} type="secondary" className="text-xs" />)}

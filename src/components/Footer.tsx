@@ -9,16 +9,13 @@ function Footer() {
                     <a href="https://github.com/professorqtaku" target="_blank" rel="noopener noreferrer" className="font-bold text-xs uppercase tracking-widest text-secondary hover:text-primary transition-colors duration-200 hover:underline decoration-primary decoration-2 underline-offset-4">
                         GitHub
                     </a>
-                    <a href="https://linkedin.com/in/qiling-tan" target="_blank" rel="noopener noreferrer" className="font-bold text-xs uppercase tracking-widest text-secondary hover:text-primary transition-colors duration-200 hover:underline decoration-primary decoration-2 underline-offset-4">
+                    <a href="https://linkedin.com/in/qilingtan" target="_blank" rel="noopener noreferrer" className="font-bold text-xs uppercase tracking-widest text-secondary hover:text-primary transition-colors duration-200 hover:underline decoration-primary decoration-2 underline-offset-4">
                         LinkedIn
-                    </a>
-                    <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="font-bold text-xs uppercase tracking-widest text-secondary hover:text-primary transition-colors duration-200 hover:underline decoration-primary decoration-2 underline-offset-4">
-                        Twitter
                     </a>
                 </div>
                 <div className="flex items-center gap-2">
                     <span className="material-symbols-outlined text-primary-container text-sm" style={{ fontVariationSettings: "'FILL' 1" }}>favorite</span>
-                    <span className="font-bold text-xs text-secondary opacity-60">Made with StarOS</span>
+                    <span className="font-bold text-xs text-secondary opacity-60">Made with Vite, React.js, TypeScript, Tailwind and opencode as AI assistant.</span>
                 </div>
             </div>
         </footer>

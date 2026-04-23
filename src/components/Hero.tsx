@@ -30,7 +30,7 @@ function Hero({ name, title, location = "Lund, Sweden", skills = "React & Node.j
                 </div>
                 <div className="flex-1 space-y-6 mt-4">
                     <div className="space-y-2">
-                        <h1 className="font-headline-xl text-on-surface text-4xl md:text-5xl">Hi, I'm {name}!</h1>
+                        <h1 className="font-headline-xl text-on-surface text-4xl md:text-5xl">Hi, <br className="md:invisible" />I'm {name}!</h1>
                         <p className="font-body-lg text-secondary">
                             I'm a <span className="bg-primary-fixed px-2 py-1 rounded-md text-on-primary-fixed">{title}</span> who builds cozy, squishy, and user-friendly digital experiences. I believe technology should feel like a warm hug.
                         </p>
@@ -41,7 +41,7 @@ function Hero({ name, title, location = "Lund, Sweden", skills = "React & Node.j
                     </div>
                     <div className="flex gap-4">
                         <Button onClick={() => window.open('mailto:qiling.tan@example.com')}>Let's Chat!</Button>
-                        <Button buttonType="secondary" href="https://professorqtaku.github.io/My_CV/">Portfolio</Button>
+                        <Button buttonType="secondary" href="https://professorqtaku.github.io/My_CV/">Resumé</Button>
                     </div>
                 </div>
             </div>

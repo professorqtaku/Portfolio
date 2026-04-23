@@ -5,12 +5,13 @@ import Chip from "../components/Chip";
 import ExperienceItem from "../components/ExperienceItem";
 import ProjectsSection from "../components/ProjectsSection";
 import { experiences } from "../data/experiences";
-import cv from '../assets/cv.json';
+import { cv } from "../data/cv";
 
 function Home() {
     const careerData = experiences.filter(exp => exp.showInHome);
-    const projectData = cv.en.projects;
-    const skills = cv.en.skills;
+    const projectData = cv.projects.filter(p => p.isInHome);
+    const skills = cv.skills;
+    const certifications = cv.certifications;
     
     return ( 
         <div className="content">
@@ -72,6 +73,23 @@ function Home() {
                                 <div className="flex flex-wrap gap-2">
                                     {skills.map((skill, index) => (
                                         <Chip key={index} text={skill} type="secondary" className="text-xs" />
+                                    ))}
+                                </div>
+                            </div>
+                            <div className="space-y-2">
+                                <span className="font-label-lg text-on-secondary-container">CERTIFICATIONS</span>
+                                <div className="space-y-2">
+                                    {certifications.map((cert, index) => (
+                                        <div key={index} className="p-3 bg-white/50 rounded-lg border-2 border-white">
+                                            <div className="flex items-center gap-2">
+                                                <i className="material-symbols-outlined text-primary-container text-lg" style={{ fontVariationSettings: "'FILL' 1" }}>verified</i>
+                                                <span className="font-label-lg text-on-surface">{cert.name}</span>
+                                            </div>
+                                            <div className="flex justify-between text-xs text-on-surface-variant mt-1">
+                                                <span>{cert.issuer}</span>
+                                                <span>{cert.date}</span>
+                                            </div>
+                                        </div>
                                     ))}
                                 </div>
                             </div>
