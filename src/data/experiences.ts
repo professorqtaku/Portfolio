@@ -21,7 +21,6 @@ export const experiences = [
         location: "Lund, Sweden",
         type: "Full-time",
         workMode: "Hybrid",
-        showInHome: true,
         descriptions: [
             "Developing technical solutions for staff and users within LSS",
             "Working with a fantastic team driven by helping people's daily lives",
@@ -52,7 +51,6 @@ export const experiences = [
         location: "Malmö, Sweden",
         type: "Internship",
         workMode: "On-site",
-        showInHome: true,
         descriptions: [
             "14 weeks full of learning and challenges",
             "Learned new techniques including GraphQL, NodeJS, NextJs, Docker, Kubernetes",
